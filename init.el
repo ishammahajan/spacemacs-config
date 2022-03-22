@@ -34,7 +34,10 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(lua
      javascript
-     terraform
+     (terraform :variables
+                terraform-auto-format-on-save t
+                t35.172.127.240erraform-backend 'lsp)
+     python
      (dart :variables
            ;; dart-enable-analysis-server t
            dart-backend 'lsp
