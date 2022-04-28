@@ -57,10 +57,17 @@ This function should only modify configuration layer settings."
      dap
      ;; markdown
      multiple-cursors
-     org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (org :variables
+          org-enable-roam-support t
+          org-todo-dependencies-strategy 'naive-auto
+          org-enable-appear-support t
+          org-want-todo-bindings t)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            shell-default-shell 'eshell
+            shell-default-term-shell "/bin/bash"
+            close-window-with-terminal t)
      ;; spell-checking
      syntax-checking
      version-control
